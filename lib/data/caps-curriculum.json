@@ -1,0 +1,266 @@
+{
+    "metadata": {
+        "name": "CAPS EMS Curriculum Dataset",
+        "description": "Curriculum and Assessment Policy Statement for Economic and Management Sciences",
+        "targetPhase": "Senior Phase",
+        "grades": [
+            7,
+            8,
+            9
+        ],
+        "subject": "Economic and Management Sciences (EMS)",
+        "country": "South Africa",
+        "version": "1.0.0",
+        "lastUpdated": "2024-06-02"
+    },
+    "curriculum": {
+        "grade7": {
+            "term1": {
+                "topics": [
+                    {
+                        "name": "The Economy",
+                        "learningObjective": "Understand basic economic concepts and the role of different economic participants in the South African economy",
+                        "concepts": [
+                            "economy",
+                            "economic participants",
+                            "households",
+                            "businesses",
+                            "government",
+                            "foreign sector",
+                            "economic activities",
+                            "goods and services"
+                        ],
+                        "duration": "3 weeks",
+                        "description": "Introduction to the basic structure and participants of the South African economy"
+                    },
+                    {
+                        "name": "Needs and Wants",
+                        "learningObjective": "Distinguish between needs and wants and understand the concept of scarcity and choice",
+                        "concepts": [
+                            "needs",
+                            "wants",
+                            "scarcity",
+                            "choice",
+                            "opportunity cost",
+                            "limited resources",
+                            "unlimited wants",
+                            "basic needs"
+                        ],
+                        "duration": "2 weeks",
+                        "description": "Understanding fundamental economic concepts of needs, wants, and resource allocation"
+                    },
+                    {
+                        "name": "Circular Flow",
+                        "learningObjective": "Explain the circular flow of goods, services, and money in a simple economy",
+                        "concepts": [
+                            "circular flow model",
+                            "households",
+                            "firms",
+                            "real flow",
+                            "money flow",
+                            "factor market",
+                            "product market",
+                            "income",
+                            "expenditure"
+                        ],
+                        "duration": "3 weeks",
+                        "description": "Understanding how goods, services, and money flow between economic participants"
+                    },
+                    {
+                        "name": "Markets",
+                        "learningObjective": "Understand different types of markets and how buying and selling takes place",
+                        "concepts": [
+                            "markets",
+                            "buyers",
+                            "sellers",
+                            "local markets",
+                            "regional markets",
+                            "national markets",
+                            "formal markets",
+                            "informal markets",
+                            "spaza shops",
+                            "street vendors"
+                        ],
+                        "duration": "2 weeks",
+                        "description": "Exploring different types of markets in the South African context"
+                    }
+                ]
+            }
+        },
+        "grade8": {
+            "term1": {
+                "topics": [
+                    {
+                        "name": "Production",
+                        "learningObjective": "Understand the factors of production and how goods and services are produced in South Africa",
+                        "concepts": [
+                            "production",
+                            "factors of production",
+                            "land",
+                            "labour",
+                            "capital",
+                            "entrepreneurship",
+                            "natural resources",
+                            "human resources",
+                            "capital goods",
+                            "productivity",
+                            "manufacturing",
+                            "agriculture"
+                        ],
+                        "duration": "3 weeks",
+                        "description": "Exploring how goods and services are produced using various factors of production"
+                    },
+                    {
+                        "name": "Forms of Ownership",
+                        "learningObjective": "Identify and compare different forms of business ownership in the South African context",
+                        "concepts": [
+                            "sole proprietorship",
+                            "partnership",
+                            "private company",
+                            "public company",
+                            "close corporation",
+                            "cooperative",
+                            "state-owned enterprise",
+                            "black economic empowerment",
+                            "small business",
+                            "medium enterprise",
+                            "SMME",
+                            "franchise"
+                        ],
+                        "duration": "3 weeks",
+                        "description": "Understanding different business structures and ownership models in South Africa"
+                    },
+                    {
+                        "name": "Labour",
+                        "learningObjective": "Understand labour as a factor of production and workers rights in South Africa",
+                        "concepts": [
+                            "labour",
+                            "workforce",
+                            "employment",
+                            "unemployment",
+                            "skilled labour",
+                            "unskilled labour",
+                            "semi-skilled labour",
+                            "labour unions",
+                            "collective bargaining",
+                            "minimum wage",
+                            "labour laws",
+                            "CCMA",
+                            "worker rights"
+                        ],
+                        "duration": "2 weeks",
+                        "description": "Examining labour as a factor of production and employment issues in South Africa"
+                    },
+                    {
+                        "name": "Markets",
+                        "learningObjective": "Analyze how markets function and understand market structures in the South African economy",
+                        "concepts": [
+                            "market structures",
+                            "perfect competition",
+                            "monopoly",
+                            "oligopoly",
+                            "monopolistic competition",
+                            "price determination",
+                            "supply and demand",
+                            "market forces",
+                            "competition",
+                            "market share",
+                            "barriers to entry",
+                            "consumer choice"
+                        ],
+                        "duration": "2 weeks",
+                        "description": "Understanding how different market structures operate in the South African economy"
+                    }
+                ]
+            }
+        },
+        "grade9": {
+            "term1": {
+                "topics": [
+                    {
+                        "name": "Economic Systems",
+                        "learningObjective": "Compare and evaluate different economic systems and their impact on South African society",
+                        "concepts": [
+                            "economic systems",
+                            "traditional economy",
+                            "command economy",
+                            "market economy",
+                            "mixed economy",
+                            "capitalism",
+                            "socialism",
+                            "economic freedom",
+                            "government intervention",
+                            "resource allocation",
+                            "economic efficiency",
+                            "equity"
+                        ],
+                        "duration": "3 weeks",
+                        "description": "Analyzing different economic systems and understanding South Africa's mixed economy"
+                    },
+                    {
+                        "name": "Business Planning",
+                        "learningObjective": "Develop basic business planning skills and understand the importance of planning in business success",
+                        "concepts": [
+                            "business plan",
+                            "business idea",
+                            "market research",
+                            "target market",
+                            "SWOT analysis",
+                            "business objectives",
+                            "marketing strategy",
+                            "financial planning",
+                            "cash flow",
+                            "break-even analysis",
+                            "risk management",
+                            "business ethics"
+                        ],
+                        "duration": "3 weeks",
+                        "description": "Understanding the fundamentals of business planning and developing entrepreneurial skills"
+                    },
+                    {
+                        "name": "Financial Literacy",
+                        "learningObjective": "Develop personal financial management skills and understand the South African financial system",
+                        "concepts": [
+                            "personal finance",
+                            "budgeting",
+                            "saving",
+                            "investing",
+                            "debt management",
+                            "credit",
+                            "interest rates",
+                            "inflation",
+                            "banking services",
+                            "insurance",
+                            "retirement planning",
+                            "financial institutions",
+                            "Reserve Bank"
+                        ],
+                        "duration": "2 weeks",
+                        "description": "Building essential financial literacy skills for personal and business financial management"
+                    },
+                    {
+                        "name": "Entrepreneurship",
+                        "learningObjective": "Understand entrepreneurship and its role in economic development and job creation in South Africa",
+                        "concepts": [
+                            "entrepreneurship",
+                            "entrepreneur",
+                            "innovation",
+                            "creativity",
+                            "opportunity recognition",
+                            "risk taking",
+                            "job creation",
+                            "economic development",
+                            "small business",
+                            "startup",
+                            "business incubators",
+                            "government support",
+                            "youth entrepreneurship"
+                        ],
+                        "duration": "2 weeks",
+                        "description": "Exploring entrepreneurship as a pathway to economic empowerment and development"
+                    }
+                ]
+            }
+        }
+    }
+}
