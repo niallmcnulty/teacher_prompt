@@ -9,8 +9,8 @@ interface APIError {
   type?: string;
   stack?: string;
   response?: {
-    data?: any;
-    headers?: any;
+    data?: Record<string, unknown>;
+    headers?: Record<string, string>;
     statusText?: string;
   };
 }

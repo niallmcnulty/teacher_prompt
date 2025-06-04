@@ -123,7 +123,7 @@ export function getAllTopics() {
   return allTopics;
 }
 
-export default {
+const curriculumUtils = {
   getCurriculumData,
   getAvailableGrades,
   getTopicsForGrade,
@@ -131,3 +131,5 @@ export default {
   findTopic,
   getAllTopics,
 };
+
+export default curriculumUtils;

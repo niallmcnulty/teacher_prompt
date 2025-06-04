@@ -675,6 +675,12 @@ export function generatePrompt(params: PromptGenerationParams): string {
   return prompt.trim();
 }
 
-export default {
-  generatePrompt
-}; 
+const promptGenerator = {
+  generatePrompt,
+  generateEnhancedLearningObjectives,
+  generateScaffoldingDescription,
+  generateBloomsGuidance,
+  generateSouthAfricanContext
+};
+
+export default promptGenerator; 
