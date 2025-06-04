@@ -4,14 +4,16 @@ import React, { useState, useCallback, Suspense } from 'react';
 import InputPanel from '../components/InputPanel';
 import PromptPreview from '../components/PromptPreview';
 import ErrorBoundary from '../components/ErrorBoundary';
+import { Topic, LearningObjectType, ScaffoldingLevel, BloomsLevel } from '../lib/types';
 
 // Define the form data type
 interface FormData {
-  subject: string;
-  grade: string;
-  topic: string;
-  learningObjectType: string;
-  [key: string]: string; // For any additional form fields
+  grade: number;
+  topic: Topic;
+  learningObjectType: LearningObjectType;
+  scaffoldingLevel: ScaffoldingLevel;
+  bloomsLevel: BloomsLevel;
+  includeSouthAfricanContext: boolean;
 }
 
 export default function Home() {
