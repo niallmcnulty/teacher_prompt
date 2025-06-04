@@ -5,8 +5,17 @@ import { usePromptStore } from '../lib/store/prompt-store';
 import { Topic, LearningObjectType, ScaffoldingLevel, BloomsLevel } from '../lib/types';
 import Dropdown, { DropdownOption } from './ui/Dropdown';
 
+interface FormData {
+  grade: number;
+  topic: Topic;
+  learningObjectType: LearningObjectType;
+  scaffoldingLevel: ScaffoldingLevel;
+  bloomsLevel: BloomsLevel;
+  includeSouthAfricanContext: boolean;
+}
+
 interface InputPanelProps {
-  onGenerate: (formData: any) => Promise<void>;
+  onGenerate: (formData: FormData) => Promise<void>;
 }
 
 export default function InputPanel({ onGenerate }: InputPanelProps) {

@@ -131,14 +131,14 @@ export default function Dropdown({
               {options.map((option) => (
                 <Listbox.Option
                   key={option.id}
-                  className={({ active }) =>
+                  className={({ selected }) =>
                     `relative cursor-default select-none py-2 pl-10 pr-4 transition-all duration-200 ease-in-out
-                    ${active ? 'bg-primary-50 text-primary-900' : 'text-gray-900 hover:bg-gray-50'}`
+                    ${selected ? 'bg-primary-50 text-primary-900' : 'text-gray-900 hover:bg-gray-50'}`
                   }
                   value={option.value}
                   aria-selected={option.value === value}
                 >
-                  {({ selected, active }) => (
+                  {({ selected }) => (
                     <>
                       <span className={`block truncate ${selected ? 'font-medium' : 'font-normal'} transition-all duration-200 ease-in-out`}>
                         {option.label}

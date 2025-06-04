@@ -81,7 +81,7 @@ export function getTopicByName(grade: number, topicName: string): Topic | undefi
 export function getAllConceptsForGrade(grade: number): string[] {
   const topics = getTopicsForGrade(grade);
   const concepts = topics.flatMap(topic => topic.concepts);
-  return [...new Set(concepts)]; // Remove duplicates
+  return Array.from(new Set(concepts)); // Remove duplicates
 }
 
 /**
@@ -115,7 +115,7 @@ export function findTopic(grade: number, topicName: string) {
 }
 
 export function getAllTopics() {
-  const allTopics: any[] = [];
+  const allTopics: (Topic & { grade: number })[] = [];
   [7, 8, 9].forEach((grade) => {
     const topics = getTopicsForGrade(grade);
     topics.forEach((topic) => allTopics.push({ grade, ...topic }));

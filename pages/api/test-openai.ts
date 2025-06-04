@@ -1,6 +1,20 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { openai, callOpenAI } from '../../lib/utils/openai-client';
 
+interface APIError {
+  name?: string;
+  message?: string;
+  status?: number;
+  code?: string;
+  type?: string;
+  stack?: string;
+  response?: {
+    data?: any;
+    headers?: any;
+    statusText?: string;
+  };
+}
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -46,18 +60,19 @@ export default async function handler(
         keyPrefix: process.env.OPENAI_API_KEY?.substring(0, 10) + '...'
       }
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
+    const apiError = error as APIError;
     console.error('Test API call failed:', {
       error: {
-        name: error?.name,
-        message: error?.message,
-        status: error?.status,
-        code: error?.code,
-        type: error?.type,
-        stack: error?.stack,
-        response: error?.response?.data,
-        headers: error?.response?.headers,
-        statusText: error?.response?.statusText
+        name: apiError?.name,
+        message: apiError?.message,
+        status: apiError?.status,
+        code: apiError?.code,
+        type: apiError?.type,
+        stack: apiError?.stack,
+        response: apiError?.response?.data,
+        headers: apiError?.response?.headers,
+        statusText: apiError?.response?.statusText
       },
       apiKeyInfo: {
         hasApiKey: !!process.env.OPENAI_API_KEY,
@@ -69,11 +84,11 @@ export default async function handler(
     return res.status(500).json({
       success: false,
       error: {
-        message: error?.message,
-        status: error?.status,
-        code: error?.code,
-        type: error?.type,
-        response: error?.response?.data
+        message: apiError?.message,
+        status: apiError?.status,
+        code: apiError?.code,
+        type: apiError?.type,
+        response: apiError?.response?.data
       },
       apiKeyInfo: {
         hasApiKey: !!process.env.OPENAI_API_KEY,

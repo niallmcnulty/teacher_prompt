@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { openai, callOpenAI, OpenAIError } from '../../lib/utils/openai-client';
+import { openai, callOpenAI } from '../../lib/utils/openai-client';
 
 interface GeneratePromptRequest {
   grade: number;
@@ -8,6 +8,20 @@ interface GeneratePromptRequest {
   scaffoldingLevel: string;
   bloomsLevel: string;
   includeSouthAfricanContext: boolean;
+}
+
+interface APIError {
+  name?: string;
+  message?: string;
+  status?: number;
+  code?: string;
+  type?: string;
+  stack?: string;
+  response?: {
+    data?: unknown;
+    headers?: Record<string, string>;
+    statusText?: string;
+  };
 }
 
 export default async function handler(
@@ -86,27 +100,32 @@ Please provide a detailed, well-structured response that includes:
       }
 
       return res.status(200).json({ prompt: generatedPrompt });
-    } catch (error: any) {
+    } catch (error) {
+      const apiError = error as APIError;
       console.error('OpenAI API error details:', {
-        name: error?.name,
-        message: error?.message,
-        status: error?.status,
-        code: error?.code,
-        type: error?.type,
-        stack: error?.stack,
-        response: error?.response?.data,
-        headers: error?.response?.headers,
-        statusText: error?.response?.statusText,
+        name: apiError?.name,
+        message: apiError?.message,
+        status: apiError?.status,
+        code: apiError?.code,
+        type: apiError?.type,
+        stack: apiError?.stack,
+        response: apiError?.response?.data,
+        headers: apiError?.response?.headers,
+        statusText: apiError?.response?.statusText,
         hasApiKey: !!process.env.OPENAI_API_KEY,
         keyLength: process.env.OPENAI_API_KEY?.length || 0
       });
       return res.status(500).json({ 
         error: 'Error generating prompt with OpenAI',
-        details: error?.message || 'Unknown error occurred'
+        details: apiError?.message || 'Unknown error occurred'
       });
     }
   } catch (error) {
-    console.error('Error in prompt generation:', error);
-    return res.status(500).json({ error: 'Error processing request' });
+    const apiError = error as APIError;
+    console.error('Error in prompt generation:', apiError);
+    return res.status(500).json({ 
+      error: 'Error processing request',
+      details: apiError?.message || 'Unknown error occurred'
+    });
   }
 } 
