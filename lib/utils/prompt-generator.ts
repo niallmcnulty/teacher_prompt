@@ -1,4 +1,4 @@
-import { Topic } from './curriculum';
+import { Topic } from '../types';
 
 export type LearningObjectType = 
   | 'Lesson Plan'

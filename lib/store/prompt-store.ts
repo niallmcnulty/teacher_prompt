@@ -28,7 +28,7 @@ interface PromptStore {
 
 const initialState: FormState = {
   grade: 7,
-  topic: 'The Economy',
+  topic: 'The Economy' as Topic,
   learningObjectType: 'Lesson Plan',
   scaffoldingLevel: 'High Support',
   bloomsLevel: 'Remember',
