@@ -1,32 +1,25 @@
 'use client';
 
 import React, { useState, useCallback, Suspense } from 'react';
-import dynamic from 'next/dynamic';
 import InputPanel from '../components/InputPanel';
 import PromptPreview from '../components/PromptPreview';
 import ErrorBoundary from '../components/ErrorBoundary';
-import { generatePrompt } from '../lib/utils/prompt-generator';
 
-// Dynamically import heavy components
-const DynamicQualityScore = dynamic(() => import('../components/QualityScore'), {
-  loading: () => <div className="animate-pulse h-32 bg-gray-100 rounded-lg" />,
-  ssr: false,
-});
-
-// Loading fallback component
-const LoadingFallback = () => (
-  <div className="animate-pulse space-y-4">
-    <div className="h-8 bg-gray-100 rounded w-3/4" />
-    <div className="h-32 bg-gray-100 rounded" />
-  </div>
-);
+// Define the form data type
+interface FormData {
+  subject: string;
+  grade: string;
+  topic: string;
+  learningObjectType: string;
+  [key: string]: string; // For any additional form fields
+}
 
 export default function Home() {
   const [prompt, setPrompt] = useState<string>('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | undefined>();
 
-  const handleGeneratePrompt = useCallback(async (formData: any) => {
+  const handleGeneratePrompt = useCallback(async (formData: FormData) => {
     try {
       setIsLoading(true);
       setError(undefined);

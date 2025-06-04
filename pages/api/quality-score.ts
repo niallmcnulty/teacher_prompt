@@ -9,6 +9,12 @@ interface GeneratePromptRequest {
   bloomsLevel: string;
 }
 
+interface OpenAIError {
+  message: string;
+  status?: number;
+  code?: string;
+}
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -21,7 +27,6 @@ export default async function handler(
     const {
       grade,
       topic,
-      learningObjectType,
       scaffoldingLevel,
       bloomsLevel,
     } = req.body as GeneratePromptRequest;
@@ -58,13 +63,18 @@ export default async function handler(
       }
 
       return res.status(200).json({ prompt: generatedPrompt });
-    } catch (error: any) {
+    } catch (error) {
+      const openAIError = error as OpenAIError;
       return res.status(500).json({ 
         error: 'Error generating prompt with OpenAI',
-        details: error?.message || 'Unknown error occurred'
+        details: openAIError.message || 'Unknown error occurred'
       });
     }
   } catch (error) {
-    return res.status(500).json({ error: 'Error processing request' });
+    const openAIError = error as OpenAIError;
+    return res.status(500).json({ 
+      error: 'Error processing request',
+      details: openAIError.message || 'Unknown error occurred'
+    });
   }
 } 
