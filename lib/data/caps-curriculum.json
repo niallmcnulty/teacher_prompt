@@ -199,65 +199,63 @@
                     },
                     {
                         "name": "Business Planning",
-                        "learningObjective": "Develop basic business planning skills and understand the importance of planning in business success",
+                        "learningObjective": "Develop and evaluate a business plan for a small business in the South African context",
                         "concepts": [
                             "business plan",
-                            "business idea",
                             "market research",
-                            "target market",
                             "SWOT analysis",
-                            "business objectives",
+                            "target market",
                             "marketing strategy",
                             "financial planning",
-                            "cash flow",
+                            "start-up costs",
+                            "operating costs",
+                            "revenue projections",
                             "break-even analysis",
-                            "risk management",
-                            "business ethics"
+                            "risk assessment",
+                            "sustainability"
                         ],
                         "duration": "3 weeks",
-                        "description": "Understanding the fundamentals of business planning and developing entrepreneurial skills"
+                        "description": "Learning how to create and evaluate a comprehensive business plan for a small business"
                     },
                     {
                         "name": "Financial Literacy",
-                        "learningObjective": "Develop personal financial management skills and understand the South African financial system",
+                        "learningObjective": "Understand and apply basic financial concepts for personal and business financial management",
                         "concepts": [
-                            "personal finance",
                             "budgeting",
-                            "saving",
-                            "investing",
-                            "debt management",
+                            "savings",
+                            "investments",
+                            "banking",
                             "credit",
                             "interest rates",
-                            "inflation",
-                            "banking services",
+                            "taxation",
                             "insurance",
-                            "retirement planning",
-                            "financial institutions",
-                            "Reserve Bank"
+                            "financial planning",
+                            "debt management",
+                            "financial goals",
+                            "risk management"
                         ],
-                        "duration": "2 weeks",
-                        "description": "Building essential financial literacy skills for personal and business financial management"
+                        "duration": "3 weeks",
+                        "description": "Developing essential financial skills for personal and business financial management"
                     },
                     {
                         "name": "Entrepreneurship",
-                        "learningObjective": "Understand entrepreneurship and its role in economic development and job creation in South Africa",
+                        "learningObjective": "Understand the role of entrepreneurship in economic development and identify entrepreneurial opportunities",
                         "concepts": [
                             "entrepreneurship",
-                            "entrepreneur",
                             "innovation",
-                            "creativity",
                             "opportunity recognition",
-                            "risk taking",
-                            "job creation",
-                            "economic development",
-                            "small business",
-                            "startup",
-                            "business incubators",
-                            "government support",
-                            "youth entrepreneurship"
+                            "business ownership",
+                            "risk-taking",
+                            "problem-solving",
+                            "leadership",
+                            "networking",
+                            "business ethics",
+                            "social entrepreneurship",
+                            "sustainable business",
+                            "economic development"
                         ],
-                        "duration": "2 weeks",
-                        "description": "Exploring entrepreneurship as a pathway to economic empowerment and development"
+                        "duration": "3 weeks",
+                        "description": "Exploring the role of entrepreneurship in economic development and identifying business opportunities"
                     }
                 ]
             }
