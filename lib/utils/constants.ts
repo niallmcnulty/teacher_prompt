@@ -6,7 +6,7 @@ export const LEARNING_OBJECT_TYPES = [
   'Lesson Plan',
   'Quiz',
   'Worksheet',
-  'Activity',
+  'Project',
   'Assessment',
 ] as const;
 

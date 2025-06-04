@@ -27,7 +27,7 @@ export interface Curriculum {
 }
 
 // Learning Object Types
-export type LearningObjectType = 'Lesson Plan' | 'Quiz' | 'Worksheet' | 'Activity' | 'Assessment';
+export type LearningObjectType = 'Lesson Plan' | 'Quiz' | 'Worksheet' | 'Project' | 'Assessment';
 export type ScaffoldingLevel = 'High Support' | 'Moderate Guidance' | 'Independent Application';
 export type BloomLevel = 'Remember' | 'Understand' | 'Apply' | 'Analyze' | 'Evaluate' | 'Create';
 
